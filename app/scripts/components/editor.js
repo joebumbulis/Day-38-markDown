@@ -1,13 +1,15 @@
 import React from "react";
+import Input from "./input.js";
+import Output from "./output.js";
+import Button from "./button.js";
 
 class Editor extends React.Component {
   render() {
     return (
       <main>
-        <h3>About Navigation</h3>
-        <p>
-          By using react-router we can now have multiple 'pages' of our application.
-        </p>
+        <Input />
+        <Output />
+        <Button />
       </main>
     );
   }

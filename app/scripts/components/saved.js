@@ -23,7 +23,6 @@ class Saved extends React.Component {
           <input type="email" defaultValue="email" />
           <input type="submit" value="Send" />
         </form>
-        <Link to="/about">Learn About Us</Link>
       </section>
     );
   }

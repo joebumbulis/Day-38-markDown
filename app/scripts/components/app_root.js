@@ -12,7 +12,7 @@ const NavBar = () => {
       <br />
       <NavLink to="/editor">Write Note</NavLink>
       <br />
-      <NavLink to="/contact-us">Contact Them</NavLink>
+      <NavLink to="/saved">Saved Notes</NavLink>
     </nav>
   );
 };
@@ -24,7 +24,7 @@ class AppRoot extends React.Component {
   }
 
   onHeaderClicked({ history }) {
-    return <h1 onClick={() => history.push("/contact-us")} />;
+    return <h1 onClick={() => history.push("/saved")} />;
   }
 
   render() {
@@ -33,7 +33,7 @@ class AppRoot extends React.Component {
         <NavBar />
         <section>
           <Route render={this.onHeaderClicked} />
-          <Editor />
+
         </section>
       </main>
     );
