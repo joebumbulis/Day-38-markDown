@@ -3,13 +3,14 @@ import { connect } from "react-redux";
 import { Route, Link, NavLink } from "react-router-dom";
 import container from "../containers/all.js";
 import marked from "marked";
+import Editor from "./editor.js";
 
 const NavBar = () => {
   return (
     <nav>
       <NavLink to="/">Home</NavLink>
       <br />
-      <NavLink to="/about">About</NavLink>
+      <NavLink to="/editor">Write Note</NavLink>
       <br />
       <NavLink to="/contact-us">Contact Them</NavLink>
     </nav>
@@ -19,11 +20,11 @@ const NavBar = () => {
 class AppRoot extends React.Component {
   constructor(props) {
     super(props);
-    console.log(marked);
+    console.log(marked("I am using _markdown_."));
   }
 
   onHeaderClicked({ history }) {
-    return <h1 onClick={() => history.push("/contact-us")}>Whoa!</h1>;
+    return <h1 onClick={() => history.push("/contact-us")} />;
   }
 
   render() {
@@ -32,6 +33,7 @@ class AppRoot extends React.Component {
         <NavBar />
         <section>
           <Route render={this.onHeaderClicked} />
+          <Editor />
         </section>
       </main>
     );

@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
-class About extends React.Component {
-  render () {
+class Editor extends React.Component {
+  render() {
     return (
       <main>
         <h3>About Navigation</h3>
@@ -13,4 +13,4 @@ class About extends React.Component {
   }
 }
 
-export default About
+export default Editor;
