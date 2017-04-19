@@ -4,7 +4,7 @@ class Input extends React.Component {
   render() {
     return (
       <div className="col-left">
-        <textarea type="text" />
+        <textarea type="text" onKeyUp={this.props.onChange} />
       </div>
     );
   }
