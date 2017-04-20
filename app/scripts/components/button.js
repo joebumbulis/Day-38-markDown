@@ -12,7 +12,7 @@ class Button extends React.Component {
   clickSave() {
     var note = this.props.text;
     if (note.length >= 50) {
-      postNote(note);
+      this.props.dispatch(postNote(note));
     } else {
       alert("Note must be at least 50 characters in length to save");
     }
