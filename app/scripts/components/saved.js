@@ -17,12 +17,7 @@ class Saved extends React.Component {
   render() {
     return (
       <section>
-        <h2>Please contact Us</h2>
-        <form>
-          <input type="text" onChange={this.handleChange} defaultValue="name" />
-          <input type="email" defaultValue="email" />
-          <input type="submit" value="Send" />
-        </form>
+        <h2>{this.props.note}</h2>
       </section>
     );
   }

@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 import { Route, Link, NavLink } from "react-router-dom";
 import container from "../containers/all.js";
-import marked from "marked";
 import Editor from "./editor.js";
 
 const NavBar = () => {
@@ -20,7 +19,6 @@ const NavBar = () => {
 class AppRoot extends React.Component {
   constructor(props) {
     super(props);
-    console.log(marked("I am using _markdown_."));
   }
 
   onHeaderClicked({ history }) {

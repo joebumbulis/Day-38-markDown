@@ -11,6 +11,7 @@ class Editor extends React.Component {
     super(props);
     this.handleKey = this.handleKey.bind(this);
   }
+
   handleKey(e) {
     let input = e.target.value;
     this.props.dispatch({ type: "INPUT_KEY", text: marked(input) });
@@ -18,10 +19,10 @@ class Editor extends React.Component {
 
   render() {
     return (
-      <main>
+      <main className="main-style">
         <Input onChange={this.handleKey} />
         <Output text={this.props.note} />
-        <Button />
+        <Button text={this.props.note} />
       </main>
     );
   }
